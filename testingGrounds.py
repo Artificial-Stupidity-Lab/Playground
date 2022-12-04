@@ -1,0 +1,21 @@
+import customtkinter as tk
+tk.set_appearance_mode("dark")
+tk.set_defualt_color_theme("dark -blue")
+root = tk.CTk()
+root.geomatry("500x350")
+
+def login(): 
+    print("Test") 
+frame = tk.CTkFrame(master =  root) 
+frame.pack(pady =  20,padx = 60,fill = "both", expand = True) 
+label = tk.CTkFrame(master =  frame, text = "Login System", text_font = ("Roboto",24)) 
+label.pack(pady = 12, pad = 10) 
+Entry1 = tk.CTkEntry(Master = frame, placholder_text = "Username") 
+Entry1.pack(pady = 12, padx =  10) 
+Entry2 = tk.CTkEntry(Master = frame, placholder_text = "Password") 
+Entry2.pack(pady = 12, padx =  10) 
+button = tk.CTkButton(Master = frame, test = "login", command = login) 
+button.pack(pady = 12, padx =  10) 
+Checkbox = tk.CTkCheckBox(Master = frame, test = "Remember Me") 
+Checkbox.pack(pady = 12, padx =  10) 
+root.mainloop()
